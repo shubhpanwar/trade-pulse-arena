@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				positive: "#22c55e",
+				negative: "#ef4444",
+				trading: {
+					primary: "#172A45",
+					secondary: "#2D3748",
+					accent: "#4FD1C5",
+					highlight: "#38B2AC"
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,21 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-price-up': {
+					'0%, 100%': { backgroundColor: 'transparent' },
+					'50%': { backgroundColor: 'rgba(34, 197, 94, 0.2)' }
+				},
+				'pulse-price-down': {
+					'0%, 100%': { backgroundColor: 'transparent' },
+					'50%': { backgroundColor: 'rgba(239, 68, 68, 0.2)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-price-up': 'pulse-price-up 1s ease-in-out',
+				'pulse-price-down': 'pulse-price-down 1s ease-in-out'
 			}
 		}
 	},
